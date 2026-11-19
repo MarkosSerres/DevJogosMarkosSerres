@@ -1,0 +1,8 @@
+# Documentation — Main.cpp Implementation
+
+## Overview
+
+The `Main` class orchestrates the platformer application lifecycle (`Menu`, `Playing`, `Paused`):
+- `startNewGame()`: builds the level via `TileMap::loadPlatformLevel()`, spawns the player at `(3, 11)`, spawns patrolling enemies via `spawnEnemies()`, and initializes the side-scrolling camera;
+- `run()`: polls SFML window events (menu clicks, `Esc` pause/resume) and drives fixed-clamped `update(dt)` and `render()`;
+- `update(dt)`: reads horizontal input (`A`/`D` or `Left`/`Right`), jump (`W`/`Up`/`Space`), and sprint (`Shift`), updates `Player` and `Enemy` instances, and returns to `AppState::Menu` when `hp <= 0` or `reachedGoal` is true.

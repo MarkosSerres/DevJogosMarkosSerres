@@ -1,0 +1,7 @@
+# Documentation — Trap.cpp Implementation
+
+## Overview
+
+`Trap` models a carnivorous plant ambush trap placed directly on top of grass tiles (`WALL_TILE`):
+- While `Idle` or in `Cooldown`, displays `armadilhasBloco.png` (`32 × 32`) disguised as a distinct grass patch;
+- When the player steps onto the trap's `AABB`, transitions to `Attacking`, deals `20` damage with knockback, and plays the 9-frame bite animation from `armadilhaAtk-Sheet.png` (`288 × 32`).

@@ -1,0 +1,16 @@
+# Documentation — Mushroom.cpp Implementation
+
+## Overview
+
+`Mushroom` extends `Entity` to implement a stationary ambush enemy that reacts to the player's distance, and `Projectile` models the spore projectile it fires:
+- Uses `cogumelo-Sheet-Sheet.png` (`512 × 32` px, 16 frames of `32 × 32`):
+  - Frames `0..3`: emerging from the ground;
+  - Frames `4..7`: hiding into the ground;
+  - Frames `8..15`: attacking (fires projectile on frame `13`, the 6th attack frame, at vertical middle height).
+
+## State Machine (`Mushroom::update`)
+
+- `Hidden`: stays underground (frame `7`) while the player is too close (`<= HIDE_RADIUS`) or out of range (`> ATTACK_RADIUS`). Transitions to `Emerging` when the player is in `(HIDE_RADIUS, ATTACK_RADIUS]`.
+- `Emerging`: plays frames `0..3` and transitions to `Attacking` (or `Hiding` if the player approached).
+- `Attacking`: loops frames `8..15` aimed toward the player, spawning a `Projectile` on frame `13` (`ATTACK_FIRE_FRAME`). Transitions to `Hiding` if the player gets close or leaves range.
+- `Hiding`: plays frames `4..7` and returns to `Hidden`.

@@ -1,0 +1,9 @@
+# Documentation — Renderer.cpp Implementation
+
+## Overview
+
+The `Renderer` class encapsulates all SFML 3 drawing for menus, side-scrolling platformer world, and HUD:
+- `setupMapView` / `updateCamera`: tracks the player horizontally while clamping the camera within the level boundaries (`MAP_WIDTH * TILE_SIZE` by `MAP_HEIGHT * TILE_SIZE`);
+- `drawMap`: culls horizontally to the active camera view and draws ground/grass (`WALL_TILE`), bonus platforms (`PLATFORM_TILE`), coins (`COIN_TILE`), and goal flagpole (`GOAL_TILE`);
+- `drawEnemies` and `drawPlayer`: render placeholder geometric shapes for enemies and the player (including invulnerability blinking);
+- `drawHud`: renders the HP bar, stamina bar, coin counter, and score in screen coordinates.

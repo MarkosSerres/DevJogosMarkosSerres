@@ -1,0 +1,8 @@
+# Documentation — Enemy.cpp Implementation
+
+## Overview
+
+The `Enemy` struct extends `Entity` to implement a patrolling Goomba-style platformer enemy:
+- Walks horizontally along `direction` (`-1.0f` or `+1.0f`) under `GRAVITY`;
+- Reverses direction when colliding with solid walls or reaching the edge of a platform (`!tileMap.isSolid(probeCol, probeRow)`);
+- Supports classic stomp defeat: if the player is falling (`player.body.velocity.y > 0`) and lands on top of the enemy, the enemy is deactivated, the player bounces (`STOMP_BOUNCE_VELOCITY`), and `STOMP_SCORE` is awarded; otherwise the player takes `CONTACT_DAMAGE`.

@@ -1,0 +1,51 @@
+{
+  "group_id": "a3a975c8-1eb7-4fa8-a713-f86ccbcebbdc",
+  "states": [
+    {
+      "character": {
+        "id": "60bd385a-60f5-4a3e-b3b3-59a96e1e402a",
+        "name": "Idle (copy)",
+        "prompt": "Create a charming and memorable female young wizard character for a 2D pixel art platformer video game.  **CHARACTER DESIGN:** A small, adorable apprentice mage with a curious and adventurous personality.  - Small and slightly chibi proportions. - Large expressive eyes. - Short hair, slightly messy, with a few strands visible beneath her hat. - Oversized pointed wizard hat, slightly tilted, with a small crescent moon ornament. - Dark magical robe with lighter colored details. - Small cape flowing behind her. - A simple belt with a tiny magical pouch. - Holding a wooden magic staff with a glowing crystal at its tip. - Small boots suitable for an adventurous journey.  **ART STYLE:** - High-quality handcrafted pixel art. - Inspired by classic 16-bit RPG and platformer characters. - Distinctive silhouette, instantly recognizable. - Carefully placed highlights and shadows. - Consistent pixel clusters. - Limited but expressive color palette. - Crisp pixels, no anti-aliasing, no blur. - Beautiful details without excessive visual complexity.  **COLOR PALETTE:** - Deep purple and midnight blue for her clothing. - Lavender and violet highlights. - Soft golden details. - Cyan or light blue magical crystal. - Pale skin tones.  **POSE AND PRESENTATION:** - Full body character. - Standing in a neutral idle pose. - Facing three-quarters to the right. - Staff held naturally in one hand. - Feet clearly visible. - Entire character centered in the canvas. - Transparent background.  **TECHNICAL SPECIFICATIONS:** - Sprite design suitable for a 2D platformer. - Character proportions must remain consistent across future animation frames. - Clean silhouette for easy sprite separation. - No background, no scenery, no text, no UI. - No multiple characters. - No sprite sheet. - Single character illustration only.",
+        "size": {
+          "width": 32,
+          "height": 32
+        },
+        "template_id": "mannequin",
+        "directions": 8,
+        "view": "side",
+        "created_at": "2026-11-18T16:57:33.071086+00:00"
+      },
+      "folder": "Idle_copy",
+      "frames": {
+        "rotations": {
+          "south": "Idle_copy/rotations/south.png",
+          "south-east": "Idle_copy/rotations/south-east.png",
+          "east": "Idle_copy/rotations/east.png",
+          "north-east": "Idle_copy/rotations/north-east.png",
+          "north": "Idle_copy/rotations/north.png",
+          "north-west": "Idle_copy/rotations/north-west.png",
+          "west": "Idle_copy/rotations/west.png",
+          "south-west": "Idle_copy/rotations/south-west.png"
+        },
+        "animations": {
+          "Running": {
+            "west": [
+              "Idle_copy/animations/Running/west/frame_000.png",
+              "Idle_copy/animations/Running/west/frame_001.png",
+              "Idle_copy/animations/Running/west/frame_002.png",
+              "Idle_copy/animations/Running/west/frame_003.png"
+            ],
+            "east": [
+              "Idle_copy/animations/Running/east/frame_000.png",
+              "Idle_copy/animations/Running/east/frame_001.png",
+              "Idle_copy/animations/Running/east/frame_002.png",
+              "Idle_copy/animations/Running/east/frame_003.png"
+            ]
+          }
+        }
+      }
+    }
+  ],
+  "export_version": "3.1",
+  "export_date": "2026-11-18T17:00:40.686815"
+}

@@ -1,0 +1,16 @@
+# Documentation — Player.cpp Implementation
+
+## Overview
+
+The `Player` struct extends `Entity` to represent the playable 2D platformer character:
+- Inherits `RigidBody2D body`, `Collision2D collision`, `active`, and `id` from `Entity`;
+- Tracks platformer metrics (`speed`, `hp`, `maxHp`, `stamina`, `maxStamina`, `invulnTimer`, `coins`, `score`, `onGround`, `facingRight`, `reachedGoal`);
+- Integrates horizontal movement, sprinting (`Shift`), jumping (`W`/`Up`/`Space`), gravity, and axis-separated solid tile collisions against `TileMap`.
+
+## update Implementation
+
+- Updates `invulnTimer` and stamina drain/regeneration (sprinting requires `stamina > 0` while moving);
+- Triggers `body.velocity.y = JUMP_VELOCITY` when `jumpPressed && onGround`;
+- Applies `GRAVITY` clamped to `MAX_FALL_SPEED`;
+- Resolves horizontal and vertical `AABB` collisions independently against `TileMap::isSolid`, snapping to tile edges and setting `onGround = true` on landing;
+- Sets `hp = 0` if the player falls below the level bounds, and calls `checkCollectiblesAndGoal(tileMap)` to collect `COIN_TILE` cells and detect `GOAL_TILE`.
